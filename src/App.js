@@ -1,19 +1,28 @@
-import React from 'react';
+import React, {useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { createContext } from 'react';
 import All from './pages/All';
 import About from './pages/About';
 import Connect from './pages/Connect';
 import Portfolio from './pages/Portfolio';
-import Resume from './pages/Resume';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Nav from './components/Nav';
-import Project from './components/Project';
 import './App.css';
+import ReactSwitch from 'react-switch';
+
+export const ThemeContext = createContext(null);
 
 function App() {
+  const [theme, setTheme] = useState('light');
+
+  const toggleTheme = () => {
+    setTheme((curr) => (curr === 'light' ? 'dark' : 'light'));
+  };
+
   return (
-    <div className="App">
+    <ThemeContext.Provider value={{theme, toggleTheme}}>
+    <div className="App" id={theme}>
       <Header />
       <Nav />
       <main>
@@ -21,13 +30,12 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/connect" element={<Connect />} />
           <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="/project" element={<Project />} />
           <Route path="*" element={<All />} />
         </Routes>
       </main>
       <Footer />
     </div>
+    </ThemeContext.Provider>
   );
 }
 

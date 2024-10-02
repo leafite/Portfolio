@@ -2,14 +2,24 @@
   display: flex;
   justify-content: center;
   text-align: center;
+  padding: 3%;
 }
 
 .navbar ul{
   display: flex;
-  background-color: rgba(221, 220, 220, 0.829);
-  border-radius: 50px;
+  background-color: rgba(236, 236, 236, 0.733);
+  border-radius: 3em;
   position: relative;
-  padding-left: 10px;
+  padding-left: 2%;
+  padding-right: 0.2%;
+}
+
+#light .navbar ul{
+  background-color: #ecececbb;
+}
+
+#dark .navbar ul{
+  background-color: #696969bb;
 }
 
 .navbar ul li{
@@ -23,43 +33,78 @@
   font-weight: bold;
   font-size: 12px;
   text-decoration: none;
-  color: black;
   padding:15px 0px;
   display: block;
 }
 
-.Connect{
-  width:75px;
+#dark .navbar ul li a{
+  color: white;
 }
 
-.Projects{
- width:65px;
+#light .navbar ul li a{
+  color: black;
+}
+
+
+/* Navbar distance */
+
+.Connect{
+  width:4.69rem;
+}
+
+.Portfolio{
+ width:4.06rem;
 }
 
 .About{
-  width:60px;
+  width:3.75rem;
 }
 
 .Contact{
-  width:55px;
+  width:3.44rem;
 }
 
 .Home{
-  width:55px;
+  width:3.44rem;
 }
 
-.Resume{
-  width:70px;
-}
+/* Slider component */
 
 .slider {
   position: absolute;
   width:62px;
-  margin: 1%;
+  margin: 1.2%;
   height:85%;
   left:0px;
-  background-color: #ffffff;
-  border-radius: 50px;
+  border-radius: 4rem;
   z-index: 1;
   transition: 0.5s ease;
+}
+
+#light .slider{
+  background-color: #ffffff;
+}
+
+#dark .slider{
+  background-color: #363333;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+.switch {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+
+/* Media Query for smaller devices */
+@media only screen and (max-width: 768px) {
+  .switch {
+    position: relative; /* Change to relative for stacking */
+    margin-top: 1em; /* Space above switch when stacked */
+    right: auto; /* Reset right position */
+    top: auto; /* Reset top position */
+  }
 }
