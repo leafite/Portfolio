@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Nav = () => {
     const [hover, setHover] = useState(0);
@@ -22,7 +23,12 @@ const Nav = () => {
             <ul>
                 {menuItems.map((item, index) => (
                     <li key={item.id} className={item.id} onClick={() => handleClick(index)}>
-                        <a href={`#${item.id}`}>{item.name}</a>
+                        <NavLink 
+                            to={item.link} 
+                            className="navbar-item" 
+                            >
+                            {item.name}
+                        </NavLink>
                     </li>
                 ))}
                 <span 

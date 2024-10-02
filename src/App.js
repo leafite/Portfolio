@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes} from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import All from './pages/All';
 import About from './pages/About';
 import Connect from './pages/Connect';
@@ -16,14 +16,16 @@ function App() {
     <div className="App">
       <Header />
       <Nav />
-      <Routes>
-        <Route path="/" element={<All />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/connect" element={<Connect />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/resume" element={<Resume />} />
-        <Route path="/project" element={<Project />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/about" element={<About />} />
+          <Route path="/connect" element={<Connect />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/project" element={<Project />} />
+          <Route path="*" element={<All />} />
+        </Routes>
+      </main>
       <Footer />
     </div>
   );
