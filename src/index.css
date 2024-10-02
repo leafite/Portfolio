@@ -1,13 +1,63 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.navbar{
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbar ul{
+  display: flex;
+  background-color: rgba(221, 220, 220, 0.829);
+  border-radius: 50px;
+  position: relative;
+  padding-left: 10px;
+}
+
+.navbar ul li{
+  list-style: none;
+  z-index: 2;
+  flex-grow: 1;
+}
+
+.navbar ul li a{
+  font-size: 15px;
+  text-decoration: none;
+  color: black;
+  padding:15px 0px;
+  display: block;
+}
+
+.Connect{
+  width:75px;
+}
+
+.Projects{
+ width:65px;
+}
+
+.About{
+  width:60px;
+}
+
+.Contact{
+  width:55px;
+}
+
+.Home{
+  width:55px;
+}
+
+.Resume{
+  width:70px;
+}
+
+.slider {
+  position: absolute;
+  width:62px;
+  margin: 1%;
+  height:85%;
+  left:0px;
+  background-color: #ffffff;
+  border-radius: 50px;
+  z-index: 1;
+  transition: 0.5s ease;
 }
