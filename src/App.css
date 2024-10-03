@@ -30,28 +30,36 @@
   transition-duration: 0.7s;
 }
 
+#dark .containers{
+  background-color: #696969bb;
+  color: white;
+}
+
+#light .containers{
+  background-color: #ecececbb;
+  color: black;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
 /* About css */
 
 .about-container{
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   margin-left: 5%;
   text-align: left;
   padding:.5%;
   border-radius: 2rem;
-  height:100px;
-  width:70%;
+  height:auto;
+  width:auto;
+  max-width:70%;
   justify-content:left;
-}
-
-#dark .about-container{
-  background-color: #696969bb;
-  color: white;
-}
-
-#light .about-container{
-  background-color: #ecececbb;
-  color: black;
+  background-color: inherit;
 }
 
 .about-title{
@@ -59,9 +67,11 @@
   align-items: center;
   justify-content: center;
   padding-left: 1rem;
-  height: 100%;
+  padding-right: 1rem;
+  height: auto;
   border-radius: 2rem 0 0 2rem;
-  width:30%;
+  max-width:30%;
+  width: auto;
 }
 
 #dark .about-title{
@@ -81,6 +91,25 @@
 
 .about-body{
   padding-top: 0.5%;
-  padding-left: 1%;
+  padding: 1%;
   font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: auto;
+  flex: 1;
+  white-space: normal;
+  font-size: 14px;
+  font-family: 'Gill Sans', 'Gill Sans MT','Trebuchet MS', sans-serif;
+}
+
+.map-container{
+  position: relative;
+  display: block;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  width: 18%;
+  height: 250px;
+  margin-right: 4rem;
+  border-radius: 3rem;
 }
