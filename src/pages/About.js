@@ -2,8 +2,11 @@ import React from 'react';
 
 const About = () => {
     return(
-        <div>
-            <h1>About Page</h1>
+        <div className='about-container'>
+            <div className='about-title'>
+                <h1>About me</h1>
+                </div>
+                <p className='about-body'>Testing</p>
         </div>
     );
 };

@@ -9,7 +9,6 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import Nav from './components/Nav';
 import './App.css';
-import ReactSwitch from 'react-switch';
 
 export const ThemeContext = createContext(null);
 
