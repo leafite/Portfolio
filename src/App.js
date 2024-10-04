@@ -22,6 +22,7 @@ function App() {
   return (
     <ThemeContext.Provider value={{theme, toggleTheme}}>
     <div className="App" id={theme}>
+      <div className='resize'>
       <Header />
       <Nav />
       <main>
@@ -33,6 +34,7 @@ function App() {
         </Routes>
       </main>
       <Footer />
+      </div>
     </div>
     </ThemeContext.Provider>
   );

@@ -1,113 +1,141 @@
-.navbar{
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  padding: 3%;
-}
-
-/* navbar ul css formatting*/
-
-.navbar ul{
-  display: flex;
-  background-color: rgba(236, 236, 236, 0.733);
-  border-radius: 3em;
-  position: relative;
-  padding-right: 0.5%;
-}
-
-#light .navbar ul{
-  background-color: #ecececbb;
-}
-
-#dark .navbar ul{
-  background-color: #696969bb;
-}
-
-.navbar ul li{
-  list-style: none;
-  z-index: 2;
-  flex-grow: 1;
-}
+.navbar{  
+  display: flex;  
+  justify-content: center;  
+  text-align: center;  
+  padding: 3%;  
+}  
+  
+/* navbar ul css formatting*/  
+  
+.navbar ul{  
+  display: flex;  
+  background-color: rgba(236, 236, 236, 0.733);  
+  border-radius: 3em;  
+  position: relative;  
+  padding-right: 0.5%;  
+}  
+  
+#light .navbar ul{  
+  background-color: #e6e6e6bb;  
+}  
+  
+#dark .navbar ul{  
+  background-color: #696969bb;  
+}  
+  
+.navbar ul li{  
+  list-style: none;  
+  z-index: 2;  
+  flex-grow: 1;  
+}  
 
 /* navbar ul li a css formatting*/
 
-.navbar ul li a{
-  font-family: Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 12px;
-  text-decoration: none;
-  padding:0.9375rem 0;
-  display: block;
-}
-
-#dark .navbar ul li a{
-  color: white;
-}
-
-#light .navbar ul li a{
-  color: black;
-}
+.navbar ul li a{  
+  font-family: Helvetica, sans-serif;  
+  font-weight: bold;  
+  font-size: 12px;  
+  text-decoration: none;  
+  padding:0.9375rem 0;  
+  display: block;  
+}  
+  
+#dark .navbar ul li a{  
+  color: white;  
+}  
+  
+#light .navbar ul li a{  
+  color: black;  
+}  
 
 
 /* Navbar distance */
 
-.Connect{
-  width:4.69rem;
-}
+.Connect{  
+  width:4.69rem;  
+}  
+  
+.Portfolio{  
+ width:4.06rem;  
+}  
+  
+.About{  
+  width:3.75rem;  
+}  
+  
+.Contact{  
+  width:3.44rem;  
+}  
+  
+.Home{  
+  width:3.44rem;  
+}  
+  
+/* Slider component */  
+  
+.slider {  
+  position: absolute;  
+  width:3.875rem;  
+  margin: 1.2%;  
+  height:85%;  
+  left:0px;  
+  border-radius: 4rem;  
+  z-index: 1;  
+  transition: 0.5s ease;  
+}  
+  
+#light .slider{  
+  background-color: #ffffff;  
+}  
+  
+#dark .slider{  
+  background-color: #363333;  
+}  
+  
+::-webkit-scrollbar{  
+  display: none;  
+}  
+  
+.switch {  
+  position: absolute;  
+  top: 1em;  
+  right: 1em;  
+}  
 
-.Portfolio{
- width:4.06rem;
-}
-
-.About{
-  width:3.75rem;
-}
-
-.Contact{
-  width:3.44rem;
-}
-
-.Home{
-  width:3.44rem;
-}
-
-/* Slider component */
-
-.slider {
-  position: absolute;
-  width:3.875rem;
-  margin: 1.2%;
-  height:85%;
-  left:0px;
-  border-radius: 4rem;
-  z-index: 1;
-  transition: 0.5s ease;
-}
-
-#light .slider{
-  background-color: #ffffff;
-}
-
-#dark .slider{
-  background-color: #363333;
-}
-
-::-webkit-scrollbar{
-  display: none;
-}
-
-.switch {
-  position: absolute;
-  top: 1em;
-  right: 1em;
-}
-
-/* Media Query for smaller devices */
-@media only screen and (max-width: 768px) {
-  .switch {
-    position: relative; /* Change to relative for stacking */
-    margin-top: 1em; /* Space above switch when stacked */
-    right: auto; /* Reset right position */
-    top: auto; /* Reset top position */
-  }
+/* Responsive design adjustments */  
+  
+@media only screen and (max-width: 768px) {  
+  .about-container {  
+   max-width: 80%;  
+  }  
+  .titles {  
+   max-width: 40%;  
+  }  
+  .body {  
+   font-size: 12px;  
+  }  
+  .navbar ul {  
+   padding-right: 0;  
+  }  
+  .navbar ul li {  
+   flex-grow: 0;  
+  }  
+}  
+  
+@media only screen and (max-width: 480px) {  
+  .about-container {  
+   max-width: 90%;  
+  }  
+  .titles {  
+   max-width: 50%;  
+  }  
+  .body {  
+   font-size: 10px;  
+  }  
+  .navbar ul {  
+   padding-right: 0;  
+  }  
+  .navbar ul li {  
+   flex-grow: 0;  
+  }  
 }

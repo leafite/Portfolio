@@ -18,7 +18,7 @@ const Nav = () => {
         setHover(index);
     };
 
-    const sliderPosition = `${(hover * (97 / menuItems.length))}%`;
+    const sliderPosition = `${(hover * (96 / menuItems.length))}%`;
 
     return(
         <>

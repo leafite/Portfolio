@@ -3,11 +3,11 @@ import React from "react";
 const About = () => {
   return (
     <div className="container">
-      <div className="about-container containers">
-        <div className="about-title">
+      <div className="about-container tile">
+        <div className="titles">
           <h1>About me</h1>
         </div>
-        <p className="about-body">
+        <div className="body">
           Hi, my name is Christopher Bautista-Cruz, and my journey with
           technology started with Pokémon Silver on the Game Boy Color. From
           those early days of gaming, I’ve been captivated by how technology
@@ -27,11 +27,31 @@ const About = () => {
           Ultimately, I aim to create innovative, impactful projects that
           inspire others—just as gaming and technology have inspired me
           throughout my life.
-        </p>
+        </div>
       </div>
 
-      <div className='map-container containers'>
-            <img src='map' alt='AZ-map'/>
+      <div className='tile container map-container'>
+            <img src='../assets/map1.png' alt='AZ-map'/>
+        </div>
+
+        <div className='tile container map-container'>
+            <img src='../assets/map1.png' alt='AZ-map'/>
+        </div>
+
+        <div className='tile container map-container'>
+            <img src='../assets/map1.png' alt='AZ-map'/>
+        </div>
+
+        <div className='tile container map-container'>
+            <img src='../assets/map1.png' alt='AZ-map'/>
+        </div>
+
+        <div className='tile container map-container'>
+            <img src='../assets/map1.png' alt='AZ-map'/>
+        </div>
+
+        <div className='tile container map-container'>
+            <img src='../assets/map1.png' alt='AZ-map'/>
         </div>
 
     </div>
